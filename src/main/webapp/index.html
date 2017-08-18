@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Hello World!</title>
+
+
+        <script>
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '1273620286097000',
+                    autoLogAppEvents: true,
+                    xfbml: true,
+                    version: 'v2.10'
+                });
+                FB.AppEvents.logPageView();
+            };
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+                    return;
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+        </script>
+
+
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+
+
+
+        LOGIN FACEBOOK :
+
+        <script>
+            var finished_rendering = function () {
+                console.log("finished rendering plugins");
+                var spinner = document.getElementById("spinner");
+                spinner.removeAttribute("style");
+                spinner.removeChild(spinner.childNodes[0]);
+            }
+
+            FB.Event.subscribe('xfbml.render', finished_rendering);
+
+            FB.getLoginStatus(function (response) {
+                if (response.status === 'connected') {
+                    console.log(response.authResponse.accessToken);
+                }
+            });
+
+            FB.getLoginStatus(function (response) {
+                console.log(statusChangeCallback(response));
+            });
+
+
+            FB.api('/me', function (response) {
+                console.log(JSON.stringify(response));
+            });
+
+            FB.api('/me/permissions', function (response) {
+                console.log(JSON.stringify(response));
+            });
+
+        </script>
+
+
+        <div id="spinner" style="
+             background: #4267b2;
+             border-radius: 5px;
+             color: white;
+             height: 40px;
+             text-align: center;
+             width: 250px;">
+            Loading
+            <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-auto-logout-link="true"></div>
+        </div>
+
+
+    </body>
+</html>
