@@ -9,10 +9,20 @@ Note: to build this repository with maven you must specify "-Popenshift", eg "mv
 
 
 
+
+
+
 …or create a new repository on the command line
 
 echo "# projet6" >> README.md
 git init
+
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+
+
 git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/David7000/projet6.git
@@ -47,7 +57,9 @@ git remote -v
 
 Or if you have Git version 1.7.10 or older
 
-
-
 git remote rm origin
-"# projet6 >>> " 
+
+
+BUGG !!!!!
+
+https://stackoverflow.com/questions/4181861/src-refspec-master-does-not-match-any-when-pushing-commits-in-git"# projet6" 
