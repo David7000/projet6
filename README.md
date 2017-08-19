@@ -63,3 +63,24 @@ git remote rm origin
 BUGG !!!!!
 
 https://stackoverflow.com/questions/4181861/src-refspec-master-does-not-match-any-when-pushing-commits-in-git"# projet6" 
+
+
+
+
+
+C:\NetBeansProjects_OpenShiftV3\projet6>git push -u origin master
+Username for 'https://github.com': David7000
+Password for 'https://David7000@github.com':
+Counting objects: 18, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (18/18), 5.44 KiB | 1.36 MiB/s, done.
+Total 18 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/David7000/projet6.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+C:\NetBeansProjects_OpenShiftV3\projet6>
+
+
